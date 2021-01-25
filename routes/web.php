@@ -1,18 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Posts;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// ROUTE PAR DEFAUT
+// PATTERN: /
+// CTRL: Posts
+// ACTION: index
+Route::get('/', [Posts::class, 'index'])->name('blog');
 
-Route::get('/', function () {
-    return view('templates.index');
-});
+// LISTE DES POSTS
+// PATTERN: /posts
+// CTRL: Posts
+// ACTION: index
+Route::get('/posts', [Posts::class, 'index'])->name('posts.index');
