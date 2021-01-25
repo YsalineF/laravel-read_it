@@ -13,6 +13,6 @@ class Categorie extends Model
      * GETTER des posts de la catégorie
      */
     public function posts() {
-      return $this->hasMany('App/Models/Post');
+      return $this->hasMany('App\Models\Post');
     }
 }
